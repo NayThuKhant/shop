@@ -17,6 +17,15 @@ class Product with ChangeNotifier {
     this.isFavourite = false,
   });
 
+  Product.blueprint({
+    required this.id,
+    this.title = '',
+    this.description = '',
+    this.price = 0,
+    this.imageUrl = '',
+    this.isFavourite = false,
+  });
+
   void toggleFavourite() {
     isFavourite = !isFavourite;
     notifyListeners();

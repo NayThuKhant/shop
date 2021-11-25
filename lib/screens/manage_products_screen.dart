@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shop/screens/create_product_screen.dart';
 import 'package:shop/widgets/manage_product_item.dart';
 
 import '../providers/products.dart';
@@ -19,7 +20,9 @@ class ManageProductsScreen extends StatelessWidget {
         title: const Text('Manage Products'),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).pushNamed(CreateProductScreen.routeName);
+            },
             icon: const Icon(Icons.add),
           ),
         ],
